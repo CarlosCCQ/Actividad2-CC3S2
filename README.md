@@ -129,3 +129,7 @@ En nuestro archivo <b>docker-compose.yml</b>, se construirá una imagen utilizan
 
 ![Configuración de Grafana](./imagenes/composePrometheusGrafana.png)
 
+
+<p><b>3. Ejecutamos docker-compose.yml:</b></p>
+
+![ejecucion de docker-compose.yml](./imagenes/ejecucionDockerComposePrometheusGrafana.png)
