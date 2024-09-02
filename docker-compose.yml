@@ -18,4 +18,4 @@ services: #Seccion para definir los servicios
   grafana: # Servicio de Grafana, la herramienta de visualización
     image: grafana/grafana # Imagen oficial de Grafana
     ports:
-      - "3001:3001" # Mapea el puerto 3001 del contenedor al puerto 3001 del host
+      - "3001:3000" # Mapea el puerto 3001 del contenedor al puerto 3001 del host

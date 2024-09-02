@@ -124,6 +124,15 @@ En nuestro archivo <b>docker-compose.yml</b>, se construirá una imagen utilizan
 
 ![Configuración de Prometheus](./imagenes/prometheus.png)
 
+<p>Para usar Prometheus se necesita el uso de un cliente para ello realizaremos la siguiente instalación:</p>
+
+![Instalacion prom-client](./imagenes/paraUsoDePrometheusEnNode.png)
+
+<p><b>Actualización de app.js:</b></p>
+<p>Se actualiza <b>app.js</b> para el funcionamiento correcto de <b>Prometheus</b>, para el uso de Prometheus se necesita un cliente de prometheusm usamos <b>collectDefaultMetrics</b> para la recolección de metricas y espcificamos cada cuanto tiempo se hará esto. Para asegurarnos de que Prometheus pueda procesar correctamente los datos, se establece elt ipo de contenido de la respuesta como 'text/plain', en la siguiente solicitud de respuesta se obtiene el menssaje "Hello, World!". Finalmente utilizamos <b>module.exports</b> para que app.js pueda ser utilzado por otros archivos.</p>
+
+![actualización de app.js](./imagenes/actualizaciónApp.png)
+
 <p><b>2. Configura Grafana utilizando un docker-compose.yml actualizado:</b></p>
 <p>Grafana es un herramienta que se utiliza para anaizar y visualizar datos, permite crear cuadros de mando y graficos a partir de multiples fuentes.</p>
 
@@ -133,3 +142,18 @@ En nuestro archivo <b>docker-compose.yml</b>, se construirá una imagen utilizan
 <p><b>3. Ejecutamos docker-compose.yml:</b></p>
 
 ![ejecucion de docker-compose.yml](./imagenes/ejecucionDockerComposePrometheusGrafana.png)
+
+<h5>Exposición de resultados:</h5>
+
+<p>Visualización de la pagina Prometheus:</p>
+
+![Prometheus](./imagenes/localhostprometheus.png)
+
+<p>Conexión de Prometheus con Grafana para la visualización de metricas de nuestra aplicación:</p>
+
+
+![Conexión Prometheus](./imagenes/conexionPrometheus.png)
+
+<p>Visualización de metricas en Grafana:</p>
+
+![Visualización de metricas](./imagenes/localhostPrometheusGrafana.png)
